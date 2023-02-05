@@ -24,6 +24,19 @@
     color: white;
     border: 5px solid;
     border-radius: 2px;
+    padding: 3px 8px;
+    transition: all 0.2s ease-in-out;
+}
+
+.connect-wallet:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+a { /* removes the blue underline from connect wallet button */
+    text-decoration: none;
 }
 
 
