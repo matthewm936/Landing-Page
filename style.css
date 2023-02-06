@@ -29,6 +29,9 @@
 }
 
 .connect-wallet:hover {
+    /*
+    switches border and text color on hover, and makes text bold
+    */
     background-color: white;
     color: black;
     cursor: pointer;
@@ -44,4 +47,27 @@ a { /* removes the blue underline from connect wallet button */
     /*padding unsure what it reomves*/
     margin: 0px; 
     padding: 0px;
+}
+
+.close-button {
+    /*styles copied from connect wallet button*/
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 2px;
+    padding: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.close-button:hover {
+    /*
+    switches border and text color on hover, and makes text bold
+    */
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 2px;
 }
