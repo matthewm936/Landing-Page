@@ -4,5 +4,5 @@ window.onload = function() {
         document.getElementById('connect')
         .innerHTML = 
         "<a href='https://metamask.io/download/' style= 'color: white'>download metamask</a>";
-    }
+    } //still have to fix hover on if metamask not installed
 };
