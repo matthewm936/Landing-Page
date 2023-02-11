@@ -1,22 +1,20 @@
-import detectEthereumProvider from '@metamask/detect-provider'
+window.addEventListener("load", () => {
+  const connectButton = document.getElementById("connect");
 
-const provider = await detectEthereumProvider()
+  const connectMetamask = async () => {
+    try {
+      if (window.ethereum) {
+        await window.ethereum.enable();
+        console.log("MetaMask account connected");
+      } else {
+        console.error("MetaMask not found");
+      }
+    } catch (error) {
+      console.error("Error connecting MetaMask:", error.message);
+    }
+  };
 
-if (provider) {
+  connectButton.addEventListener("click", connectMetamask);
+});
 
-  console.log('Ethereum successfully detected!')
-
-  // From now on, this should always be true:
-  // provider === window.ethereum
-
-  // Access the decentralized web!
-
-  // Legacy providers may only have ethereum.sendAsync
-  const chainId = await provider.request({
-    method: 'eth_chainId'
-  })
-} else {
-
-  // if the provider is not detected, detectEthereumProvider resolves to null
-  console.error('Please install MetaMask!', error)
-}
+connectButton.addEventListener("load", connectMetamask);
